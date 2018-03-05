@@ -13,6 +13,9 @@
 		BA80E855204CEA58003D8048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA80E853204CEA58003D8048 /* Main.storyboard */; };
 		BA80E857204CEA58003D8048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA80E856204CEA58003D8048 /* Assets.xcassets */; };
 		BA80E85A204CEA58003D8048 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA80E858204CEA58003D8048 /* LaunchScreen.storyboard */; };
+		BA80E86C204CFCFF003D8048 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA80E86B204CFCFF003D8048 /* Login.storyboard */; };
+		BA80E870204D08C7003D8048 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80E86F204D08C7003D8048 /* LoginViewController.swift */; };
+		BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA80E871204D0B63003D8048 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,9 @@
 		BA80E856204CEA58003D8048 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA80E859204CEA58003D8048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA80E85B204CEA58003D8048 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA80E86B204CFCFF003D8048 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		BA80E86F204D08C7003D8048 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		BA80E871204D0B63003D8048 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,13 +77,80 @@
 			isa = PBXGroup;
 			children = (
 				BA80E84F204CEA58003D8048 /* AppDelegate.swift */,
-				BA80E851204CEA58003D8048 /* ViewController.swift */,
-				BA80E853204CEA58003D8048 /* Main.storyboard */,
+				BA80E86A204CF49D003D8048 /* Views */,
+				BA80E869204CF466003D8048 /* Supporting */,
+				BA80E868204CF44E003D8048 /* Storyboards */,
+				BA80E867204CF432003D8048 /* Services */,
+				BA80E866204CF41C003D8048 /* Models */,
+				BA80E865204CF409003D8048 /* Helpers */,
+				BA80E864204CF394003D8048 /* Extensions */,
+				BA80E863204CF377003D8048 /* Controllers */,
 				BA80E856204CEA58003D8048 /* Assets.xcassets */,
-				BA80E858204CEA58003D8048 /* LaunchScreen.storyboard */,
-				BA80E85B204CEA58003D8048 /* Info.plist */,
 			);
 			path = LookOut;
+			sourceTree = "<group>";
+		};
+		BA80E863204CF377003D8048 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BA80E851204CEA58003D8048 /* ViewController.swift */,
+				BA80E86F204D08C7003D8048 /* LoginViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		BA80E864204CF394003D8048 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		BA80E865204CF409003D8048 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		BA80E866204CF41C003D8048 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		BA80E867204CF432003D8048 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		BA80E868204CF44E003D8048 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				BA80E858204CEA58003D8048 /* LaunchScreen.storyboard */,
+				BA80E853204CEA58003D8048 /* Main.storyboard */,
+				BA80E86B204CFCFF003D8048 /* Login.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		BA80E869204CF466003D8048 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				BA80E871204D0B63003D8048 /* GoogleService-Info.plist */,
+				BA80E85B204CEA58003D8048 /* Info.plist */,
+			);
+			path = Supporting;
+			sourceTree = "<group>";
+		};
+		BA80E86A204CF49D003D8048 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DD94805CFF2C3BD4AE03490C /* Frameworks */ = {
@@ -150,7 +223,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA80E86C204CFCFF003D8048 /* Login.storyboard in Resources */,
 				BA80E85A204CEA58003D8048 /* LaunchScreen.storyboard in Resources */,
+				BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */,
 				BA80E857204CEA58003D8048 /* Assets.xcassets in Resources */,
 				BA80E855204CEA58003D8048 /* Main.storyboard in Resources */,
 			);
@@ -226,6 +301,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA80E870204D08C7003D8048 /* LoginViewController.swift in Sources */,
 				BA80E852204CEA58003D8048 /* ViewController.swift in Sources */,
 				BA80E850204CEA58003D8048 /* AppDelegate.swift in Sources */,
 			);
@@ -366,7 +442,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LookOut/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LookOut/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Akshay.LookOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -381,7 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = LookOut/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/LookOut/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Akshay.LookOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
