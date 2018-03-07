@@ -16,6 +16,9 @@ class MainTabBarController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        photoHelper.completionHandler = { image in
+            print("handle image")
+        }
         // 1
         delegate = self
         // 2
