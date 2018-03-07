@@ -19,9 +19,8 @@ class MainTabBarController: UITabBarController {
         photoHelper.completionHandler = { image in
             print("handle image")
         }
-        // 1
+    
         delegate = self
-        // 2
         tabBar.unselectedItemTintColor = .black
     }
 }
