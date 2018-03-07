@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import Photos
 
 class MainTabBarController: UITabBarController {
     
@@ -15,9 +16,10 @@ class MainTabBarController: UITabBarController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
         
         photoHelper.completionHandler = { image in
-            print("handle image")
+             PostService.create(for: image)
         }
     
         delegate = self

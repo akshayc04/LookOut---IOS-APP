@@ -16,6 +16,8 @@
 		BA3CFF90204F69F300946A10 /* FindFriendsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3CFF8F204F69F300946A10 /* FindFriendsViewController.swift */; };
 		BA3CFF92204F942800946A10 /* MainTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3CFF91204F942800946A10 /* MainTabBarController.swift */; };
 		BA3CFF96204F9B5000946A10 /* PhotoHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3CFF95204F9B5000946A10 /* PhotoHelper.swift */; };
+		BA3CFF98204FBBC500946A10 /*  StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3CFF97204FBBC500946A10 /*  StorageService.swift */; };
+		BA3CFF9A204FBCE600946A10 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3CFF99204FBCE600946A10 /* PostService.swift */; };
 		BA3D7922204EF3C6000FFCA4 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7921204EF3C6000FFCA4 /* CreateUsernameViewController.swift */; };
 		BA80E850204CEA58003D8048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80E84F204CEA58003D8048 /* AppDelegate.swift */; };
 		BA80E855204CEA58003D8048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA80E853204CEA58003D8048 /* Main.storyboard */; };
@@ -38,6 +40,8 @@
 		BA3CFF8F204F69F300946A10 /* FindFriendsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindFriendsViewController.swift; sourceTree = "<group>"; };
 		BA3CFF91204F942800946A10 /* MainTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarController.swift; sourceTree = "<group>"; };
 		BA3CFF95204F9B5000946A10 /* PhotoHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoHelper.swift; sourceTree = "<group>"; };
+		BA3CFF97204FBBC500946A10 /*  StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " StorageService.swift"; sourceTree = "<group>"; };
+		BA3CFF99204FBCE600946A10 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		BA3D7921204EF3C6000FFCA4 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		BA80E84C204CEA58003D8048 /* LookOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA80E84F204CEA58003D8048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -146,6 +150,8 @@
 			isa = PBXGroup;
 			children = (
 				BA3CFF87204F017200946A10 /* UserService.swift */,
+				BA3CFF97204FBBC500946A10 /*  StorageService.swift */,
+				BA3CFF99204FBCE600946A10 /* PostService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -335,6 +341,8 @@
 				BA3CFF90204F69F300946A10 /* FindFriendsViewController.swift in Sources */,
 				BA3CFF8A204F3C0200946A10 /* Constants.swift in Sources */,
 				BA3D7922204EF3C6000FFCA4 /* CreateUsernameViewController.swift in Sources */,
+				BA3CFF9A204FBCE600946A10 /* PostService.swift in Sources */,
+				BA3CFF98204FBBC500946A10 /*  StorageService.swift in Sources */,
 				BA80E850204CEA58003D8048 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -61,7 +61,7 @@ extension PhotoHelper: UINavigationControllerDelegate, UIImagePickerControllerDe
             completionHandler?(selectedImage)
         }
         
-        picker.dismiss(animated: true)
+        picker.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
