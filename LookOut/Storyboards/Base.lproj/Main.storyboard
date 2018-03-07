@@ -20,7 +20,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="IWV-o6-RYO"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="ADD" image="tab_plus_black" id="PtP-1B-qL1"/>
+                    <tabBarItem key="tabBarItem" tag="1" title="ADD" image="tab_plus_black" id="PtP-1B-qL1"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yeJ-LJ-z3X" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -52,16 +52,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="SFk-p2-UZQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="PROFILE" image="tab_profile_black" id="tUe-HR-6EB"/>
+                    <tabBarItem key="tabBarItem" tag="2" title="PROFILE" image="tab_profile_black" id="tUe-HR-6EB"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gM6-3l-qH5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1236" y="31"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Main Tab Bar Controller-->
         <scene sceneID="Y5M-vZ-F0P">
             <objects>
-                <tabBarController id="bdE-0X-XwC" sceneMemberID="viewController">
+                <tabBarController id="bdE-0X-XwC" customClass="MainTabBarController" customModule="LookOut" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="yuG-me-tKF">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
