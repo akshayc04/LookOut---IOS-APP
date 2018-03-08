@@ -26,6 +26,7 @@
 		BA80E86C204CFCFF003D8048 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA80E86B204CFCFF003D8048 /* Login.storyboard */; };
 		BA80E870204D08C7003D8048 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80E86F204D08C7003D8048 /* LoginViewController.swift */; };
 		BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA80E871204D0B63003D8048 /* GoogleService-Info.plist */; };
+		BAA9722A20510FE800E0BC35 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9722920510FE800E0BC35 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		BA80E86B204CFCFF003D8048 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BA80E86F204D08C7003D8048 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA80E871204D0B63003D8048 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BAA9722920510FE800E0BC35 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -142,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				BA37B077204D235C00F3D2D7 /* User.swift */,
+				BAA9722920510FE800E0BC35 /* Post.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				BA3CFF92204F942800946A10 /* MainTabBarController.swift in Sources */,
 				BA3CFF88204F017200946A10 /* UserService.swift in Sources */,
 				BA3CFF96204F9B5000946A10 /* PhotoHelper.swift in Sources */,
+				BAA9722A20510FE800E0BC35 /* Post.swift in Sources */,
 				BA3CFF8E204F69D200946A10 /* HomeViewController.swift in Sources */,
 				BA3CFF8C204F598500946A10 /* Storyboard+Utility.swift in Sources */,
 				BA3CFF90204F69F300946A10 /* FindFriendsViewController.swift in Sources */,
