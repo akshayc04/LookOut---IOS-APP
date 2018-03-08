@@ -27,6 +27,8 @@
 		BA80E870204D08C7003D8048 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80E86F204D08C7003D8048 /* LoginViewController.swift */; };
 		BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA80E871204D0B63003D8048 /* GoogleService-Info.plist */; };
 		BAA9722A20510FE800E0BC35 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9722920510FE800E0BC35 /* Post.swift */; };
+		BAA9722C205119A900E0BC35 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9722B205119A900E0BC35 /* UIImage+Size.swift */; };
+		BAA9722E20511A5900E0BC35 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9722D20511A5900E0BC35 /* StorageReference+Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		BA80E86F204D08C7003D8048 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA80E871204D0B63003D8048 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAA9722920510FE800E0BC35 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		BAA9722B205119A900E0BC35 /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
+		BAA9722D20511A5900E0BC35 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +107,6 @@
 				BA80E869204CF466003D8048 /* Supporting */,
 				BA80E868204CF44E003D8048 /* Storyboards */,
 				BA80E867204CF432003D8048 /* Services */,
-				BA80E866204CF41C003D8048 /* Models */,
 				BA80E865204CF409003D8048 /* Helpers */,
 				BA80E864204CF394003D8048 /* Extensions */,
 				BA80E863204CF377003D8048 /* Controllers */,
@@ -128,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				BA3CFF8B204F598500946A10 /* Storyboard+Utility.swift */,
+				BAA9722B205119A900E0BC35 /* UIImage+Size.swift */,
+				BAA9722D20511A5900E0BC35 /* StorageReference+Post.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -155,6 +160,7 @@
 				BA3CFF87204F017200946A10 /* UserService.swift */,
 				BA3CFF97204FBBC500946A10 /*  StorageService.swift */,
 				BA3CFF99204FBCE600946A10 /* PostService.swift */,
+				BA80E866204CF41C003D8048 /* Models */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -340,10 +346,12 @@
 				BA3CFF88204F017200946A10 /* UserService.swift in Sources */,
 				BA3CFF96204F9B5000946A10 /* PhotoHelper.swift in Sources */,
 				BAA9722A20510FE800E0BC35 /* Post.swift in Sources */,
+				BAA9722C205119A900E0BC35 /* UIImage+Size.swift in Sources */,
 				BA3CFF8E204F69D200946A10 /* HomeViewController.swift in Sources */,
 				BA3CFF8C204F598500946A10 /* Storyboard+Utility.swift in Sources */,
 				BA3CFF90204F69F300946A10 /* FindFriendsViewController.swift in Sources */,
 				BA3CFF8A204F3C0200946A10 /* Constants.swift in Sources */,
+				BAA9722E20511A5900E0BC35 /* StorageReference+Post.swift in Sources */,
 				BA3D7922204EF3C6000FFCA4 /* CreateUsernameViewController.swift in Sources */,
 				BA3CFF9A204FBCE600946A10 /* PostService.swift in Sources */,
 				BA3CFF98204FBBC500946A10 /*  StorageService.swift in Sources */,
