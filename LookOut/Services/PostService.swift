@@ -12,6 +12,8 @@ import FirebaseStorage
 import FirebaseDatabase
 
 struct PostService {
+    
+    
     private static func create(forURLString urlString: String, aspectHeight: CGFloat) {
         // 1
         let currentUser = User.current

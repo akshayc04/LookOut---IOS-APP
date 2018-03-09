@@ -19,6 +19,10 @@
 		BA3CFF98204FBBC500946A10 /*  StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3CFF97204FBBC500946A10 /*  StorageService.swift */; };
 		BA3CFF9A204FBCE600946A10 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3CFF99204FBCE600946A10 /* PostService.swift */; };
 		BA3D7922204EF3C6000FFCA4 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7921204EF3C6000FFCA4 /* CreateUsernameViewController.swift */; };
+		BA80DAD22051FD9D00404DFF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA80DAD12051FD9D00404DFF /* Home.storyboard */; };
+		BA80DAD420520EAC00404DFF /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80DAD320520EAC00404DFF /* PostImageCell.swift */; };
+		BA80DAD82052276100404DFF /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80DAD72052276100404DFF /* PostHeaderCell.swift */; };
+		BA80DADC2052552B00404DFF /* PostActionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80DADB2052552B00404DFF /* PostActionCell.swift */; };
 		BA80E850204CEA58003D8048 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80E84F204CEA58003D8048 /* AppDelegate.swift */; };
 		BA80E855204CEA58003D8048 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA80E853204CEA58003D8048 /* Main.storyboard */; };
 		BA80E857204CEA58003D8048 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA80E856204CEA58003D8048 /* Assets.xcassets */; };
@@ -46,6 +50,10 @@
 		BA3CFF97204FBBC500946A10 /*  StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " StorageService.swift"; sourceTree = "<group>"; };
 		BA3CFF99204FBCE600946A10 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		BA3D7921204EF3C6000FFCA4 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
+		BA80DAD12051FD9D00404DFF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
+		BA80DAD320520EAC00404DFF /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
+		BA80DAD72052276100404DFF /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
+		BA80DADB2052552B00404DFF /* PostActionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostActionCell.swift; sourceTree = "<group>"; };
 		BA80E84C204CEA58003D8048 /* LookOut.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LookOut.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA80E84F204CEA58003D8048 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA80E854204CEA58003D8048 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -170,6 +178,7 @@
 			children = (
 				BA80E858204CEA58003D8048 /* LaunchScreen.storyboard */,
 				BA80E853204CEA58003D8048 /* Main.storyboard */,
+				BA80DAD12051FD9D00404DFF /* Home.storyboard */,
 				BA80E86B204CFCFF003D8048 /* Login.storyboard */,
 			);
 			path = Storyboards;
@@ -188,6 +197,9 @@
 		BA80E86A204CF49D003D8048 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BA80DAD320520EAC00404DFF /* PostImageCell.swift */,
+				BA80DAD72052276100404DFF /* PostHeaderCell.swift */,
+				BA80DADB2052552B00404DFF /* PostActionCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -265,6 +277,7 @@
 				BA80E86C204CFCFF003D8048 /* Login.storyboard in Resources */,
 				BA80E85A204CEA58003D8048 /* LaunchScreen.storyboard in Resources */,
 				BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */,
+				BA80DAD22051FD9D00404DFF /* Home.storyboard in Resources */,
 				BA80E857204CEA58003D8048 /* Assets.xcassets in Resources */,
 				BA80E855204CEA58003D8048 /* Main.storyboard in Resources */,
 			);
@@ -300,6 +313,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LookOut/Pods-LookOut-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
@@ -307,6 +321,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -341,9 +356,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA37B078204D235C00F3D2D7 /* User.swift in Sources */,
+				BA80DAD420520EAC00404DFF /* PostImageCell.swift in Sources */,
 				BA80E870204D08C7003D8048 /* LoginViewController.swift in Sources */,
 				BA3CFF92204F942800946A10 /* MainTabBarController.swift in Sources */,
 				BA3CFF88204F017200946A10 /* UserService.swift in Sources */,
+				BA80DADC2052552B00404DFF /* PostActionCell.swift in Sources */,
 				BA3CFF96204F9B5000946A10 /* PhotoHelper.swift in Sources */,
 				BAA9722A20510FE800E0BC35 /* Post.swift in Sources */,
 				BAA9722C205119A900E0BC35 /* UIImage+Size.swift in Sources */,
@@ -355,6 +372,7 @@
 				BA3D7922204EF3C6000FFCA4 /* CreateUsernameViewController.swift in Sources */,
 				BA3CFF9A204FBCE600946A10 /* PostService.swift in Sources */,
 				BA3CFF98204FBBC500946A10 /*  StorageService.swift in Sources */,
+				BA80DAD82052276100404DFF /* PostHeaderCell.swift in Sources */,
 				BA80E850204CEA58003D8048 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
