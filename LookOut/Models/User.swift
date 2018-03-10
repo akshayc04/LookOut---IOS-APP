@@ -12,7 +12,7 @@ import FirebaseDatabase.FIRDataSnapshot
 class User: NSObject{
     
     // MARK: - Properties
-    
+    var isFollowed = false
     let uid: String
     let username: String
     
