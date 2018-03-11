@@ -2,6 +2,31 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+    
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>fb149763655691673</string>
+            </array>
+        </dict>
+    </array>
+    <key>FacebookAppID</key>
+    <string>149763655691673</string>
+    <key>FacebookDisplayName</key>
+    <string>LookOut IOS APP</string>
+    
+    
+    
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>fbapi</string>
+        <string>fb-messenger-share-api</string>
+        <string>fbauth2</string>
+        <string>fbshareextension</string>
+    </array>
+    
 	<key>NSCameraUsageDescription</key>
 	<string>To capture pictures by app users</string>
 	<key>NSPhotoLibraryUsageDescription</key>

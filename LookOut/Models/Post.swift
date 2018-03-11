@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 import FirebaseDatabase.FIRDataSnapshot
 
-class Post {
+class Post: MGKeyed {
     // properties and initializers
     var key: String?
     let imageURL: String
