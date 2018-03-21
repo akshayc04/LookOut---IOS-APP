@@ -12,6 +12,8 @@ target 'LookOut' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Kingfisher', '~> 4.0'
+  pod 'Alamofire', '~> 4.7'
+  pod 'AlamofireImage', '~> 3.3'
   
   
 

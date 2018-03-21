@@ -60,7 +60,7 @@ class User: NSObject{
         // 4
         return currentUser
     }
-    
+    	
     // MARK: - Class Methods
     
     class func setCurrent(_ user: User, writeToUserDefaults: Bool = false) {
