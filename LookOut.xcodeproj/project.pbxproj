@@ -28,7 +28,6 @@
 		BA3CFF9A204FBCE600946A10 /* PostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3CFF99204FBCE600946A10 /* PostService.swift */; };
 		BA3D7922204EF3C6000FFCA4 /* CreateUsernameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA3D7921204EF3C6000FFCA4 /* CreateUsernameViewController.swift */; };
 		BA6F94092060A734006BD89A /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6F94082060A734006BD89A /* WeatherViewController.swift */; };
-		BA6F94132060AFC7006BD89A /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA6F94122060AFC7006BD89A /* Weather.storyboard */; };
 		BA6F94172060C388006BD89A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6F94162060C388006BD89A /* Weather.swift */; };
 		BA80DAD22051FD9D00404DFF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA80DAD12051FD9D00404DFF /* Home.storyboard */; };
 		BA80DAD420520EAC00404DFF /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80DAD320520EAC00404DFF /* PostImageCell.swift */; };
@@ -43,6 +42,8 @@
 		BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA80E871204D0B63003D8048 /* GoogleService-Info.plist */; };
 		BAA9722C205119A900E0BC35 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9722B205119A900E0BC35 /* UIImage+Size.swift */; };
 		BAA9722E20511A5900E0BC35 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9722D20511A5900E0BC35 /* StorageReference+Post.swift */; };
+		BAC458C32064D0A8000C4194 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC458C22064D0A8000C4194 /* MoreViewController.swift */; };
+		BAC458C52064D730000C4194 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC458C42064D730000C4194 /* More.storyboard */; };
 		BAE2E0D620621B3F003F52BA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE2E0D520621B3F003F52BA /* APIClient.swift */; };
 		BAE2E0D820622195003F52BA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE2E0D720622195003F52BA /* Endpoint.swift */; };
 		BAE2E0DA206229CB003F52BA /* WeatherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE2E0D9206229CB003F52BA /* WeatherAPIClient.swift */; };
@@ -73,7 +74,6 @@
 		BA3CFF99204FBCE600946A10 /* PostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostService.swift; sourceTree = "<group>"; };
 		BA3D7921204EF3C6000FFCA4 /* CreateUsernameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateUsernameViewController.swift; sourceTree = "<group>"; };
 		BA6F94082060A734006BD89A /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
-		BA6F94122060AFC7006BD89A /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = SOURCE_ROOT; };
 		BA6F94162060C388006BD89A /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
 		BA80DAD12051FD9D00404DFF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BA80DAD320520EAC00404DFF /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
@@ -90,6 +90,8 @@
 		BA80E871204D0B63003D8048 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAA9722B205119A900E0BC35 /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
 		BAA9722D20511A5900E0BC35 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
+		BAC458C22064D0A8000C4194 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
+		BAC458C42064D730000C4194 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		BAE2E0D520621B3F003F52BA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		BAE2E0D720622195003F52BA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		BAE2E0D9206229CB003F52BA /* WeatherAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIClient.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 				BA3CFF8F204F69F300946A10 /* FindFriendsViewController.swift */,
 				BA3CFF91204F942800946A10 /* MainTabBarController.swift */,
 				BA6F94082060A734006BD89A /* WeatherViewController.swift */,
+				BAC458C22064D0A8000C4194 /* MoreViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -215,7 +218,7 @@
 		BA80E868204CF44E003D8048 /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				BA6F94122060AFC7006BD89A /* Weather.storyboard */,
+				BAC458C42064D730000C4194 /* More.storyboard */,
 				BA17E14C205364D40095AAF4 /* FindFriends.storyboard */,
 				BA80E858204CEA58003D8048 /* LaunchScreen.storyboard */,
 				BA80E853204CEA58003D8048 /* Main.storyboard */,
@@ -317,7 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA80E86C204CFCFF003D8048 /* Login.storyboard in Resources */,
-				BA6F94132060AFC7006BD89A /* Weather.storyboard in Resources */,
+				BAC458C52064D730000C4194 /* More.storyboard in Resources */,
 				BA80E85A204CEA58003D8048 /* LaunchScreen.storyboard in Resources */,
 				BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */,
 				BA17E14D205364D40095AAF4 /* FindFriends.storyboard in Resources */,
@@ -408,6 +411,7 @@
 				BA80DAD420520EAC00404DFF /* PostImageCell.swift in Sources */,
 				BA80E870204D08C7003D8048 /* LoginViewController.swift in Sources */,
 				BA07BA992052793C0042D474 /*  LikeService.swift in Sources */,
+				BAC458C32064D0A8000C4194 /* MoreViewController.swift in Sources */,
 				BA244EA220548FA7006F1542 /* UITableView+Utility.swift in Sources */,
 				BA3CFF92204F942800946A10 /* MainTabBarController.swift in Sources */,
 				BA3CFF88204F017200946A10 /* UserService.swift in Sources */,

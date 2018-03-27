@@ -17,7 +17,7 @@ class WeatherViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        self.title = "Syracuse Weather"
        
         
         let weatherApi = WeatherAPICLient()
