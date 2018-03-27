@@ -8,6 +8,8 @@
 
 import UIKit
 import Kingfisher
+import FirebaseAuth
+import FirebaseAuthUI
 
 class HomeViewController: UIViewController {
      var posts = [Post]()
@@ -16,6 +18,7 @@ class HomeViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var LogoutBtn: UIBarButtonItem!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -23,6 +26,18 @@ class HomeViewController: UIViewController {
         reloadTimeline()
     }
 
+    @IBAction func LogOutBtnTapped(_ sender: Any) {
+        
+//        let firebaseAuth = Auth.auth()
+//        do {
+//            try firebaseAuth.signOut()
+//            let lvc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
+//            self.present(lvc, animated: false, completion: nil)
+//        } catch let signOutError as NSError {
+//            print ("Error signing out: %@", signOutError)
+//        }
+        
+    }
     
     func configureTableView() {
         // remove separators for empty cells
