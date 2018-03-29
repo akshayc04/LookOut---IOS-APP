@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		7BA1E016EF714D7AAEF872E2 /* Pods_LookOut.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11D59DFC5CE81B8E7DC75A89 /* Pods_LookOut.framework */; };
+		BA037E51206CA75100D6D1B0 /* Weather.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA037E50206CA75100D6D1B0 /* Weather.storyboard */; };
+		BA037E53206CA8C700D6D1B0 /* BusViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA037E52206CA8C700D6D1B0 /* BusViewController.swift */; };
+		BA037E55206CA95D00D6D1B0 /* Bus.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA037E54206CA95D00D6D1B0 /* Bus.storyboard */; };
+		BA037E57206CC03300D6D1B0 /* EFImageViewZoom.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA037E56206CC03300D6D1B0 /* EFImageViewZoom.swift */; };
 		BA07BA992052793C0042D474 /*  LikeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA07BA982052793C0042D474 /*  LikeService.swift */; };
 		BA17E14520527E000095AAF4 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA17E14420527E000095AAF4 /* Post.swift */; };
 		BA17E14720527E0A0095AAF4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA17E14620527E0A0095AAF4 /* User.swift */; };
@@ -54,6 +58,10 @@
 		11D59DFC5CE81B8E7DC75A89 /* Pods_LookOut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LookOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A45200B78EDDC86AED9B0D4 /* Pods-LookOut.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookOut.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LookOut/Pods-LookOut.debug.xcconfig"; sourceTree = "<group>"; };
 		A5C545F7C56E6CCA9BEF10FB /* Pods-LookOut.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LookOut.release.xcconfig"; path = "Pods/Target Support Files/Pods-LookOut/Pods-LookOut.release.xcconfig"; sourceTree = "<group>"; };
+		BA037E50206CA75100D6D1B0 /* Weather.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Weather.storyboard; sourceTree = "<group>"; };
+		BA037E52206CA8C700D6D1B0 /* BusViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BusViewController.swift; sourceTree = "<group>"; };
+		BA037E54206CA95D00D6D1B0 /* Bus.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Bus.storyboard; sourceTree = "<group>"; };
+		BA037E56206CC03300D6D1B0 /* EFImageViewZoom.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EFImageViewZoom.swift; sourceTree = "<group>"; };
 		BA07BA982052793C0042D474 /*  LikeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = " LikeService.swift"; sourceTree = "<group>"; };
 		BA17E14420527E000095AAF4 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		BA17E14620527E0A0095AAF4 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -175,6 +183,7 @@
 				BA3CFF91204F942800946A10 /* MainTabBarController.swift */,
 				BA6F94082060A734006BD89A /* WeatherViewController.swift */,
 				BAC458C22064D0A8000C4194 /* MoreViewController.swift */,
+				BA037E52206CA8C700D6D1B0 /* BusViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -219,6 +228,8 @@
 			isa = PBXGroup;
 			children = (
 				BAC458C42064D730000C4194 /* More.storyboard */,
+				BA037E54206CA95D00D6D1B0 /* Bus.storyboard */,
+				BA037E50206CA75100D6D1B0 /* Weather.storyboard */,
 				BA17E14C205364D40095AAF4 /* FindFriends.storyboard */,
 				BA80E858204CEA58003D8048 /* LaunchScreen.storyboard */,
 				BA80E853204CEA58003D8048 /* Main.storyboard */,
@@ -242,6 +253,7 @@
 			isa = PBXGroup;
 			children = (
 				BA80DAD320520EAC00404DFF /* PostImageCell.swift */,
+				BA037E56206CC03300D6D1B0 /* EFImageViewZoom.swift */,
 				BA80DAD72052276100404DFF /* PostHeaderCell.swift */,
 				BA80DADB2052552B00404DFF /* PostActionCell.swift */,
 				BA17E150205369C40095AAF4 /* FindFriendsCell.swift */,
@@ -320,11 +332,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA80E86C204CFCFF003D8048 /* Login.storyboard in Resources */,
+				BA037E51206CA75100D6D1B0 /* Weather.storyboard in Resources */,
 				BAC458C52064D730000C4194 /* More.storyboard in Resources */,
 				BA80E85A204CEA58003D8048 /* LaunchScreen.storyboard in Resources */,
 				BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */,
 				BA17E14D205364D40095AAF4 /* FindFriends.storyboard in Resources */,
 				BA80DAD22051FD9D00404DFF /* Home.storyboard in Resources */,
+				BA037E55206CA95D00D6D1B0 /* Bus.storyboard in Resources */,
 				BA80E857204CEA58003D8048 /* Assets.xcassets in Resources */,
 				BA80E855204CEA58003D8048 /* Main.storyboard in Resources */,
 			);
@@ -430,11 +444,13 @@
 				BA3CFF8A204F3C0200946A10 /* Constants.swift in Sources */,
 				BA6F94092060A734006BD89A /* WeatherViewController.swift in Sources */,
 				BAA9722E20511A5900E0BC35 /* StorageReference+Post.swift in Sources */,
+				BA037E57206CC03300D6D1B0 /* EFImageViewZoom.swift in Sources */,
 				BA244EA020547BAD006F1542 /* DatabaseReference+Location.swift in Sources */,
 				BA3D7922204EF3C6000FFCA4 /* CreateUsernameViewController.swift in Sources */,
 				BAE2E0DA206229CB003F52BA /* WeatherAPIClient.swift in Sources */,
 				BA3CFF9A204FBCE600946A10 /* PostService.swift in Sources */,
 				BA3CFF98204FBBC500946A10 /*  StorageService.swift in Sources */,
+				BA037E53206CA8C700D6D1B0 /* BusViewController.swift in Sources */,
 				BA17E14520527E000095AAF4 /* Post.swift in Sources */,
 				BA80DAD82052276100404DFF /* PostHeaderCell.swift in Sources */,
 				BA80E850204CEA58003D8048 /* AppDelegate.swift in Sources */,

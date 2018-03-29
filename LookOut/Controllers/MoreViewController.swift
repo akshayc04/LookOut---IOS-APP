@@ -10,7 +10,9 @@ import UIKit
 
 class MoreViewController: UIViewController {
 
+    @IBOutlet weak var busBtn: UIButton!
     @IBOutlet weak var weatherBtn: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -23,6 +25,14 @@ class MoreViewController: UIViewController {
         self.navigationController?.pushViewController(WeatherController, animated: true)
         
     }
+    
+    @IBAction func busBtnTapped(_ sender: UIButton) {
+        
+        let BusController = self.storyboard?.instantiateViewController(withIdentifier: "BusViewController") as! BusViewController
+        self.navigationController?.pushViewController(BusController, animated: true)
+    }
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
