@@ -12,6 +12,8 @@ import FirebaseAuth
 import FirebaseAuthUI
 
 class HomeViewController: UIViewController {
+    
+    var authHandle: AuthStateDidChangeListenerHandle?
      var posts = [Post]()
      let refreshControl = UIRefreshControl()
     let paginationHelper = MGPaginationHelper<Post>(serviceMethod: UserService.timeline)
@@ -19,23 +21,50 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var LogoutBtn: UIBarButtonItem!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         configureTableView()
         reloadTimeline()
+        
+        
+        authHandle = Auth.auth().addStateDidChangeListener() { [unowned self] (auth, user) in
+            guard user == nil else { return }
+            
+            let loginViewController = UIStoryboard.initialViewController(for: .login)
+            self.view.window?.rootViewController = loginViewController
+            self.view.window?.makeKeyAndVisible()
+        }
+        
     }
+    
+    deinit {
+        if let authHandle = authHandle {
+            Auth.auth().removeStateDidChangeListener(authHandle)
+        }
+    }
+    
 
     @IBAction func LogOutBtnTapped(_ sender: Any) {
         
-//        let firebaseAuth = Auth.auth()
-//        do {
-//            try firebaseAuth.signOut()
-//            let lvc = self.storyboard?.instantiateViewController(withIdentifier: "LoginViewController") as! LoginViewController
-//            self.present(lvc, animated: false, completion: nil)
-//        } catch let signOutError as NSError {
-//            print ("Error signing out: %@", signOutError)
-//        }
+        let alertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let signOutAction = UIAlertAction(title: "Sign Out", style: .default) { _ in
+            do {
+                try Auth.auth().signOut()
+            } catch let error as NSError {
+                assertionFailure("Error signing out: \(error.localizedDescription)")
+            }
+            
+        }
+        alertController.addAction(signOutAction)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        alertController.addAction(cancelAction)
+        
+        present(alertController, animated: true)
         
     }
     
