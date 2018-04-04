@@ -52,6 +52,8 @@
 		BAE2E0D820622195003F52BA /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE2E0D720622195003F52BA /* Endpoint.swift */; };
 		BAE2E0DA206229CB003F52BA /* WeatherAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE2E0D9206229CB003F52BA /* WeatherAPIClient.swift */; };
 		BAE2E0DC206232F5003F52BA /* WeatherCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE2E0DB206232F5003F52BA /* WeatherCellView.swift */; };
+		BAF185442074960400F726BC /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF185432074960400F726BC /* ContactViewController.swift */; };
+		BAF185462074970400F726BC /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF185452074970400F726BC /* Contacts.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -104,6 +106,8 @@
 		BAE2E0D720622195003F52BA /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		BAE2E0D9206229CB003F52BA /* WeatherAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherAPIClient.swift; sourceTree = "<group>"; };
 		BAE2E0DB206232F5003F52BA /* WeatherCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherCellView.swift; sourceTree = "<group>"; };
+		BAF185432074960400F726BC /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
+		BAF185452074970400F726BC /* Contacts.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Contacts.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -184,6 +188,7 @@
 				BA6F94082060A734006BD89A /* WeatherViewController.swift */,
 				BAC458C22064D0A8000C4194 /* MoreViewController.swift */,
 				BA037E52206CA8C700D6D1B0 /* BusViewController.swift */,
+				BAF185432074960400F726BC /* ContactViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				BAC458C42064D730000C4194 /* More.storyboard */,
+				BAF185452074970400F726BC /* Contacts.storyboard */,
 				BA037E54206CA95D00D6D1B0 /* Bus.storyboard */,
 				BA037E50206CA75100D6D1B0 /* Weather.storyboard */,
 				BA17E14C205364D40095AAF4 /* FindFriends.storyboard */,
@@ -336,6 +342,7 @@
 				BAC458C52064D730000C4194 /* More.storyboard in Resources */,
 				BA80E85A204CEA58003D8048 /* LaunchScreen.storyboard in Resources */,
 				BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */,
+				BAF185462074970400F726BC /* Contacts.storyboard in Resources */,
 				BA17E14D205364D40095AAF4 /* FindFriends.storyboard in Resources */,
 				BA80DAD22051FD9D00404DFF /* Home.storyboard in Resources */,
 				BA037E55206CA95D00D6D1B0 /* Bus.storyboard in Resources */,
@@ -355,10 +362,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LookOut/Pods-LookOut-resources.sh",
 				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseAuthUI.bundle",
+				"${PODS_CONFIGURATION_BUILD_DIR}/FirebaseUI/FirebaseGoogleAuthUI.bundle",
+				"${PODS_ROOT}/GoogleSignIn/Resources/GoogleSignIn.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/FirebaseGoogleAuthUI.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleSignIn.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -374,6 +385,7 @@
 				"${SRCROOT}/Pods/Target Support Files/Pods-LookOut/Pods-LookOut-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
@@ -384,6 +396,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
@@ -449,6 +462,7 @@
 				BA3D7922204EF3C6000FFCA4 /* CreateUsernameViewController.swift in Sources */,
 				BAE2E0DA206229CB003F52BA /* WeatherAPIClient.swift in Sources */,
 				BA3CFF9A204FBCE600946A10 /* PostService.swift in Sources */,
+				BAF185442074960400F726BC /* ContactViewController.swift in Sources */,
 				BA3CFF98204FBBC500946A10 /*  StorageService.swift in Sources */,
 				BA037E53206CA8C700D6D1B0 /* BusViewController.swift in Sources */,
 				BA17E14520527E000095AAF4 /* Post.swift in Sources */,
@@ -591,11 +605,15 @@
 			baseConfigurationReference = 5A45200B78EDDC86AED9B0D4 /* Pods-LookOut.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MKRFH8AZKL;
 				INFOPLIST_FILE = "$(SRCROOT)/LookOut/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Akshay.LookOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -606,11 +624,15 @@
 			baseConfigurationReference = A5C545F7C56E6CCA9BEF10FB /* Pods-LookOut.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MKRFH8AZKL;
 				INFOPLIST_FILE = "$(SRCROOT)/LookOut/Supporting/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Akshay.LookOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

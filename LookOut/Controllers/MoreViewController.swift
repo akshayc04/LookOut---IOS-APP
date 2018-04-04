@@ -12,6 +12,7 @@ class MoreViewController: UIViewController {
 
     @IBOutlet weak var busBtn: UIButton!
     @IBOutlet weak var weatherBtn: UIButton!
+    @IBOutlet weak var contactBtn: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,18 +21,19 @@ class MoreViewController: UIViewController {
     }
 
     @IBAction func weatherBtnTapped(_ sender: UIButton) {
-        //performSegue(withIdentifier: "weather", sender: self)
         let WeatherController = self.storyboard?.instantiateViewController(withIdentifier: "WeatherViewController") as! WeatherViewController
         self.navigationController?.pushViewController(WeatherController, animated: true)
-        
     }
     
     @IBAction func busBtnTapped(_ sender: UIButton) {
-        
         let BusController = self.storyboard?.instantiateViewController(withIdentifier: "BusViewController") as! BusViewController
         self.navigationController?.pushViewController(BusController, animated: true)
     }
     
+    @IBAction func contactBtnTapped(_ sender: Any) {
+        let ContController = self.storyboard?.instantiateViewController(withIdentifier: "ContactViewController") as! ContactViewController
+        self.navigationController?.pushViewController(ContController, animated: true)
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

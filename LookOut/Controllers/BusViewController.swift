@@ -11,6 +11,8 @@ import UIKit
 private let reuseIdentifier = "BusCell"
 
 class BusViewController: UICollectionViewController, EFImageViewZoomDelegate {
+    
+    var arrimg = [#imageLiteral(resourceName: "js"),#imageLiteral(resourceName: "euclid"),#imageLiteral(resourceName: "nh"),#imageLiteral(resourceName: "ec")]
 
 
     override func viewDidLoad() {
@@ -52,17 +54,17 @@ class BusViewController: UICollectionViewController, EFImageViewZoomDelegate {
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 5
+        return arrimg.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
         
         let imageview:UIImageView=UIImageView(frame: CGRect(x: 0, y: 0, width: cell.frame.width, height: cell.frame.height))
-       // let image:UIImage = UIImage()
-        imageview.image = #imageLiteral(resourceName: "weather")
+        
+        imageview.image = arrimg[indexPath.row]
+        
         cell.contentView.addSubview(imageview)
-        // Configure the cell
     
         return cell
     }
@@ -70,7 +72,7 @@ class BusViewController: UICollectionViewController, EFImageViewZoomDelegate {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let imageView = EFImageViewZoom()
         
-        imageView.image = #imageLiteral(resourceName: "btn_heart_red_solid")
+        imageView.image = arrimg[indexPath.row]
         imageView._delegate = self
         imageView._minimumZoomScale = 1.0
         imageView._maximumZoomScale = 6.0
