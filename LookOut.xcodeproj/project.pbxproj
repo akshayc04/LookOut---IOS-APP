@@ -53,6 +53,8 @@
 		BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA80E871204D0B63003D8048 /* GoogleService-Info.plist */; };
 		BAA9722C205119A900E0BC35 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9722B205119A900E0BC35 /* UIImage+Size.swift */; };
 		BAA9722E20511A5900E0BC35 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9722D20511A5900E0BC35 /* StorageReference+Post.swift */; };
+		BABFAEB62076DB4A008A2869 /* ChatListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABFAEB52076DB4A008A2869 /* ChatListCell.swift */; };
+		BABFAEB82076EAFA008A2869 /* NewChatUserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BABFAEB72076EAFA008A2869 /* NewChatUserCell.swift */; };
 		BAC458C32064D0A8000C4194 /* MoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC458C22064D0A8000C4194 /* MoreViewController.swift */; };
 		BAC458C52064D730000C4194 /* More.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAC458C42064D730000C4194 /* More.storyboard */; };
 		BAE2E0D620621B3F003F52BA /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAE2E0D520621B3F003F52BA /* APIClient.swift */; };
@@ -62,6 +64,23 @@
 		BAF185442074960400F726BC /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF185432074960400F726BC /* ContactViewController.swift */; };
 		BAF185462074970400F726BC /* Contacts.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BAF185452074970400F726BC /* Contacts.storyboard */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BABFAECD20772866008A2869 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BABFAEC820772865008A2869 /* JSQMessages.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88A25F0219D8DEC400924534;
+			remoteInfo = JSQMessages;
+		};
+		BABFAECF20772866008A2869 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BABFAEC820772865008A2869 /* JSQMessages.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 88A25F1B19D8DEC500924534;
+			remoteInfo = JSQMessagesTests;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		11D59DFC5CE81B8E7DC75A89 /* Pods_LookOut.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LookOut.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,6 +133,9 @@
 		BA80E871204D0B63003D8048 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BAA9722B205119A900E0BC35 /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
 		BAA9722D20511A5900E0BC35 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
+		BABFAEB52076DB4A008A2869 /* ChatListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListCell.swift; sourceTree = "<group>"; };
+		BABFAEB72076EAFA008A2869 /* NewChatUserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewChatUserCell.swift; sourceTree = "<group>"; };
+		BABFAEC820772865008A2869 /* JSQMessages.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = JSQMessages.xcodeproj; path = JSQMessagesViewController/JSQMessages.xcodeproj; sourceTree = "<group>"; };
 		BAC458C22064D0A8000C4194 /* MoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreViewController.swift; sourceTree = "<group>"; };
 		BAC458C42064D730000C4194 /* More.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = More.storyboard; sourceTree = "<group>"; };
 		BAE2E0D520621B3F003F52BA /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
@@ -151,7 +173,6 @@
 				BA17E14620527E0A0095AAF4 /* User.swift */,
 				BA17E14420527E000095AAF4 /* Post.swift */,
 				BA6F94162060C388006BD89A /* Weather.swift */,
-				BAE2E0DB206232F5003F52BA /* WeatherCellView.swift */,
 				BA3AFBD02075F2E1000B6C84 /* Chat.swift */,
 				BA3AFBD22075F417000B6C84 /* Message.swift */,
 			);
@@ -161,6 +182,7 @@
 		BA80E843204CEA57003D8048 = {
 			isa = PBXGroup;
 			children = (
+				BABFAEC820772865008A2869 /* JSQMessages.xcodeproj */,
 				BA80E84E204CEA58003D8048 /* LookOut */,
 				BA80E84D204CEA58003D8048 /* Products */,
 				4DA887111A46FC63E03F7D28 /* Pods */,
@@ -280,12 +302,24 @@
 			isa = PBXGroup;
 			children = (
 				BA80DAD320520EAC00404DFF /* PostImageCell.swift */,
+				BAE2E0DB206232F5003F52BA /* WeatherCellView.swift */,
 				BA037E56206CC03300D6D1B0 /* EFImageViewZoom.swift */,
 				BA80DAD72052276100404DFF /* PostHeaderCell.swift */,
 				BA80DADB2052552B00404DFF /* PostActionCell.swift */,
 				BA17E150205369C40095AAF4 /* FindFriendsCell.swift */,
+				BABFAEB52076DB4A008A2869 /* ChatListCell.swift */,
+				BABFAEB72076EAFA008A2869 /* NewChatUserCell.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		BABFAEC920772865008A2869 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BABFAECE20772866008A2869 /* JSQMessages.app */,
+				BABFAED020772866008A2869 /* JSQMessagesTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		DD94805CFF2C3BD4AE03490C /* Frameworks */ = {
@@ -346,12 +380,35 @@
 			mainGroup = BA80E843204CEA57003D8048;
 			productRefGroup = BA80E84D204CEA58003D8048 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BABFAEC920772865008A2869 /* Products */;
+					ProjectRef = BABFAEC820772865008A2869 /* JSQMessages.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BA80E84B204CEA57003D8048 /* LookOut */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BABFAECE20772866008A2869 /* JSQMessages.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = JSQMessages.app;
+			remoteRef = BABFAECD20772866008A2869 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BABFAED020772866008A2869 /* JSQMessagesTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = JSQMessagesTests.xctest;
+			remoteRef = BABFAECF20772866008A2869 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BA80E84A204CEA57003D8048 /* Resources */ = {
@@ -410,6 +467,8 @@
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQMessagesViewController/JSQMessagesViewController.framework",
+				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
@@ -421,6 +480,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQMessagesViewController.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
@@ -458,6 +519,7 @@
 				BA17E1492053613E0095AAF4 /* FollowService.swift in Sources */,
 				BAE2E0D820622195003F52BA /* Endpoint.swift in Sources */,
 				BA80DAD420520EAC00404DFF /* PostImageCell.swift in Sources */,
+				BABFAEB62076DB4A008A2869 /* ChatListCell.swift in Sources */,
 				BA80E870204D08C7003D8048 /* LoginViewController.swift in Sources */,
 				BA07BA992052793C0042D474 /*  LikeService.swift in Sources */,
 				BAC458C32064D0A8000C4194 /* MoreViewController.swift in Sources */,
@@ -473,6 +535,7 @@
 				BA244EA420549C0F006F1542 /* MGPaginationHelper.swift in Sources */,
 				BA17E151205369C40095AAF4 /* FindFriendsCell.swift in Sources */,
 				BA6F94172060C388006BD89A /* Weather.swift in Sources */,
+				BABFAEB82076EAFA008A2869 /* NewChatUserCell.swift in Sources */,
 				BA3CFF8E204F69D200946A10 /* HomeViewController.swift in Sources */,
 				BAE2E0D620621B3F003F52BA /* APIClient.swift in Sources */,
 				BA3CFF8C204F598500946A10 /* Storyboard+Utility.swift in Sources */,
@@ -638,6 +701,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKRFH8AZKL;
 				INFOPLIST_FILE = "$(SRCROOT)/LookOut/Supporting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Akshay.LookOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -657,6 +721,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MKRFH8AZKL;
 				INFOPLIST_FILE = "$(SRCROOT)/LookOut/Supporting/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Akshay.LookOut;
 				PRODUCT_NAME = "$(TARGET_NAME)";

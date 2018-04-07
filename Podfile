@@ -16,7 +16,5 @@ target 'LookOut' do
   pod 'AlamofireImage', '~> 3.3'
   pod 'GoogleSignIn'
   pod 'FirebaseUI/Google'
-  
-  
 
 end

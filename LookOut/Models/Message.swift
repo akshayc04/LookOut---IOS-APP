@@ -7,10 +7,18 @@
 //
 import FirebaseDatabase.FIRDataSnapshot
 import Foundation
+import JSQMessagesViewController.JSQMessage
 
 class Message {
     
     // MARK: - Properties
+    
+    lazy var jsqMessageValue: JSQMessage = {
+        return JSQMessage(senderId: self.sender.uid,
+                          senderDisplayName: self.sender.username,
+                          date: self.timestamp,
+                          text: self.content)
+    }()
     
     var key: String?
     let content: String
