@@ -18,7 +18,8 @@ class CreateUsernameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-            Next.layer.cornerRadius = 8
+            Next.layer.cornerRadius = 20
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "wallpaper"))
         // Do any additional setup after loading the view.
     }
 

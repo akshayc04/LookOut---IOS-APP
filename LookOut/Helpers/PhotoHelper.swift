@@ -50,17 +50,19 @@ class PhotoHelper: NSObject {
         let imagePickerController = UIImagePickerController()
         imagePickerController.sourceType = sourceType
         imagePickerController.delegate = self
-        
+        imagePickerController.allowsEditing = true
         viewController.present(imagePickerController, animated: true)
     }
 }
 
 extension PhotoHelper: UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        if let selectedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
-            completionHandler?(selectedImage)
+        if let editedImage = info["UIImagePickerControllerEditedImage"] as? UIImage {
+            completionHandler?(editedImage)
         }
-        
+        else if let originalImage = info["UIImagePickerControllerOriginalImage"] as? UIImage {
+            completionHandler?(originalImage)
+        }
         picker.dismiss(animated: true, completion: nil)
     }
     

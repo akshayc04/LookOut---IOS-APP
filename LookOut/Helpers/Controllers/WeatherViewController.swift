@@ -17,7 +17,7 @@ class WeatherViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Syracuse Weather"
+        //self.title = "Syracuse Weather"
        
         
         let weatherApi = WeatherAPICLient()
@@ -38,7 +38,10 @@ class WeatherViewController: UITableViewController {
 
     }
 
-    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
 
     // MARK: - Table view data source
 
@@ -52,7 +55,10 @@ class WeatherViewController: UITableViewController {
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath)
-       let cellview = data[indexPath.row]
+       
+    
+        cell.backgroundColor = UIColor(red:0.35, green:0.56, blue:0.69, alpha:1.0)
+        let cellview = data[indexPath.row]
         
            cell.textLabel?.text = cellview.day
             cell.detailTextLabel?.text = cellview.description

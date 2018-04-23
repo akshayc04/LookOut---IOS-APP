@@ -17,9 +17,11 @@ import FirebaseGoogleAuthUI
 class LoginViewController: UIViewController {
 
     @IBOutlet weak var login: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.view.backgroundColor = UIColor(patternImage: #imageLiteral(resourceName: "wallpaper"))
+        login.layer.cornerRadius = 20
         // Do any additional setup after loading the view.
     }
 
@@ -34,8 +36,9 @@ class LoginViewController: UIViewController {
         let providers: [FUIAuthProvider] = [FUIGoogleAuth()]
         authUI.providers = providers
         
-        let authViewController = authUI.authViewController()
-        present(authViewController, animated: true)
+        let authViewController = CustomAuthView(authUI: authUI)
+        let navc = UINavigationController(rootViewController: authViewController)
+        present(navc, animated: true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,7 +62,8 @@ typealias FIRUser = FirebaseAuth.User
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
         if let error = error {
-            assertionFailure("Error signing in: \(error.localizedDescription)")
+          //  assertionFailure("Error signing in: \(error.localizedDescription)")
+            print(error.localizedDescription)
             return
         }
         // 1
