@@ -329,7 +329,7 @@ static NSMutableSet *jsqMessagesCollectionViewCellActions = nil;
     //  thus, remove any additional subviews hidden behind the new media view
     dispatch_async(dispatch_get_main_queue(), ^{
         for (NSUInteger i = 0; i < self.messageBubbleContainerView.subviews.count; i++) {
-            if (self.messageBubbleContainerView.subviews[i] != self->_mediaView) {
+            if (self.messageBubbleContainerView.subviews[i] != _mediaView) {
                 [self.messageBubbleContainerView.subviews[i] removeFromSuperview];
             }
         }

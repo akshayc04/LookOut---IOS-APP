@@ -16,5 +16,8 @@ target 'LookOut' do
   pod 'AlamofireImage', '~> 3.3'
   pod 'GoogleSignIn'
   pod 'FirebaseUI/Google'
+  pod 'SwiftyJSON'
+  pod 'JSQMessagesViewController'
+  pod 'GoogleMaps'
 
 end

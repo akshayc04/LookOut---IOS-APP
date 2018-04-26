@@ -8,7 +8,10 @@
 
 import UIKit
 import Firebase
+import GoogleMaps
 
+
+let googleApiKey = "AIzaSyCJU6VywrEDvrJX6I1_9ChRDW0CwWE1iRE"
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
         UIApplication.shared.statusBarStyle = .default
         configureInitialRootViewController(for: window)
+        GMSServices.provideAPIKey(googleApiKey)
         
         return true
     }
