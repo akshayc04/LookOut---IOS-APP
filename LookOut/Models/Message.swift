@@ -10,9 +10,7 @@ import Foundation
 import JSQMessagesViewController.JSQMessage
 
 class Message {
-    
-    // MARK: - Properties
-    
+ 
     lazy var jsqMessageValue: JSQMessage = {
         return JSQMessage(senderId: self.sender.uid,
                           senderDisplayName: self.sender.username,

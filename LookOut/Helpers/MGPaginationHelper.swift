@@ -12,7 +12,7 @@ protocol MGKeyed {
 }
 
 class MGPaginationHelper<T: MGKeyed> {
-    // ...
+    
     enum MGPaginationState {
         case initial
         case ready
@@ -25,7 +25,7 @@ class MGPaginationHelper<T: MGKeyed> {
     var state: MGPaginationState = .initial
     var lastObjectKey: String?
     
-    // MARK: - Init
+    
     
     init(pageSize: UInt = 3, serviceMethod: @escaping (UInt, String?, @escaping (([T]) -> Void)) -> Void) {
         self.pageSize = pageSize
@@ -33,39 +33,29 @@ class MGPaginationHelper<T: MGKeyed> {
     }
     
     func paginate(completion: @escaping ([T]) -> Void) {
-        // 2
+       
         switch state {
-        // 3
+      
         case .initial:
             lastObjectKey = nil
             fallthrough
-            
-        // 4
+         
         case .ready:
             state = .loading
             serviceMethod(pageSize, lastObjectKey) { [unowned self] (objects: [T]) in
-                // 5
+              
                 defer {
-                    // 6
                     if let lastObjectKey = objects.last?.key {
                         self.lastObjectKey = lastObjectKey
                     }
-                    
-                    // 7
                     self.state = objects.count < Int(self.pageSize) ? .end : .ready
                 }
-                
-                // 8
                 guard let _ = self.lastObjectKey else {
                     return completion(objects)
                 }
-                
-                // 9
                 let newObjects = Array(objects.dropFirst())
                 completion(newObjects)
             }
-            
-        // 10
         case .loading, .end:
             return
         }

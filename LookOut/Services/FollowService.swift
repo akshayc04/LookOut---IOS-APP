@@ -22,23 +22,19 @@ struct FollowService {
                 success(false)
             }
             
-            // 1
             UserService.posts(for: user) { (posts) in
-                // 2
+               
                 let postKeys = posts.flatMap { $0.key }
                 
-                // 3
                 var followData = [String : Any]()
                 let timelinePostDict = ["poster_uid" : user.uid]
                 postKeys.forEach { followData["timeline/\(currentUID)/\($0)"] = timelinePostDict }
                 
-                // 4
                 ref.updateChildValues(followData, withCompletionBlock: { (error, ref) in
                     if let error = error {
                         assertionFailure(error.localizedDescription)
                     }
                     
-                    // 5
                     success(error == nil)
                 })
             }
@@ -48,7 +44,6 @@ struct FollowService {
     
     private static func unfollowUser(_ user: User, forCurrentUserWithSuccess success: @escaping (Bool) -> Void) {
         let currentUID = User.current.uid
-        // Use NSNull() object instead of nil because updateChildValues expects type [Hashable : Any]
         // http://stackoverflow.com/questions/38462074/using-updatechildvalues-to-delete-from-firebase
         let followData = ["followers/\(user.uid)/\(currentUID)" : NSNull(),
                           "following/\(currentUID)/\(user.uid)" : NSNull()]

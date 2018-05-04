@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         FirebaseApp.configure()
-        UIApplication.shared.statusBarStyle = .default
+        UIApplication.shared.statusBarStyle = .lightContent
         configureInitialRootViewController(for: window)
         GMSServices.provideAPIKey(googleApiKey)
         
@@ -61,9 +61,7 @@ extension AppDelegate {
         if Auth.auth().currentUser != nil,
             let userData = defaults.object(forKey: Constants.UserDefaults.currentUser) as? Data,
             let user = NSKeyedUnarchiver.unarchiveObject(with: userData) as? User {
-            
             User.setCurrent(user)
-            
             initialViewController = UIStoryboard.initialViewController(for: .main)
         } else {
             initialViewController = UIStoryboard.initialViewController(for: .login)

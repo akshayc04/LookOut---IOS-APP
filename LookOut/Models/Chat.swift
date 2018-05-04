@@ -11,8 +11,6 @@ import FirebaseDatabase.FIRDataSnapshot
 
 class Chat {
     
-    // MARK - Properties
-    
     var key: String?
     let title: String
     let memberHash: String
@@ -22,16 +20,12 @@ class Chat {
     
     
     init(members: [User]){
-        // 1
         assert(members.count == 2, "There must be two members in a chat.")
         
-        // 2
         self.title = members.reduce("") { (acc, cur) -> String in
             return acc.isEmpty ? cur.username : "\(acc), \(cur.username)"
         }
-        // 3
         self.memberHash = Chat.hash(forMembers: members)
-        // 4
         self.memberUIDs = members.map { $0.uid }
     }
     

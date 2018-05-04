@@ -13,13 +13,9 @@ class WeatherViewController: UITableViewController {
 
   var data = [WeatherCellView]()
 
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        //self.title = "Syracuse Weather"
-       
-        
+    
         let weatherApi = WeatherAPICLient()
         let weatherEndpoint = WeatherEndPoint.tenDayForecat(city: "Syracuse", state: "NY")
         weatherApi.weather(with: weatherEndpoint) { (either) in
@@ -43,29 +39,24 @@ class WeatherViewController: UITableViewController {
         
     }
 
-    // MARK: - Table view data source
-
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         return data.count
-
     }
 
    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "WeatherCell", for: indexPath)
        
-    
-        cell.backgroundColor = UIColor(red:0.35, green:0.56, blue:0.69, alpha:1.0)
+        cell.layer.cornerRadius = 15
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = UIColor(red:0.35, green:0.56, blue:0.69, alpha:1.0).cgColor
         let cellview = data[indexPath.row]
         
            cell.textLabel?.text = cellview.day
             cell.detailTextLabel?.text = cellview.description
             cellview.loadImage { (image) in
             cell.imageView?.image = image
-            }
-
+        }
         return cell
     }
     

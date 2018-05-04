@@ -47,6 +47,8 @@
 		BA6C8D7620918B9200FA328D /* PlaceMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6C8D7520918B9200FA328D /* PlaceMarker.swift */; };
 		BA6F94092060A734006BD89A /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6F94082060A734006BD89A /* WeatherViewController.swift */; };
 		BA6F94172060C388006BD89A /* Weather.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA6F94162060C388006BD89A /* Weather.swift */; };
+		BA730F182096C04F00B74B69 /* YouTube.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA730F172096C04F00B74B69 /* YouTube.storyboard */; };
+		BA730F1C2096C08B00B74B69 /* Maps.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA730F1B2096C08B00B74B69 /* Maps.storyboard */; };
 		BA80DAD22051FD9D00404DFF /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA80DAD12051FD9D00404DFF /* Home.storyboard */; };
 		BA80DAD420520EAC00404DFF /* PostImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80DAD320520EAC00404DFF /* PostImageCell.swift */; };
 		BA80DAD82052276100404DFF /* PostHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80DAD72052276100404DFF /* PostHeaderCell.swift */; };
@@ -58,6 +60,7 @@
 		BA80E86C204CFCFF003D8048 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA80E86B204CFCFF003D8048 /* Login.storyboard */; };
 		BA80E870204D08C7003D8048 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA80E86F204D08C7003D8048 /* LoginViewController.swift */; };
 		BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA80E871204D0B63003D8048 /* GoogleService-Info.plist */; };
+		BAA748AD20954D7500D5E075 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA748AC20954D7500D5E075 /* VideoViewController.swift */; };
 		BAA9722C205119A900E0BC35 /* UIImage+Size.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9722B205119A900E0BC35 /* UIImage+Size.swift */; };
 		BAA9722E20511A5900E0BC35 /* StorageReference+Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAA9722D20511A5900E0BC35 /* StorageReference+Post.swift */; };
 		BAADD8A72089B92E0005258F /* CustomAuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAADD8A62089B92E0005258F /* CustomAuthView.swift */; };
@@ -135,6 +138,8 @@
 		BA6C8D7520918B9200FA328D /* PlaceMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceMarker.swift; sourceTree = "<group>"; };
 		BA6F94082060A734006BD89A /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
 		BA6F94162060C388006BD89A /* Weather.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Weather.swift; sourceTree = "<group>"; };
+		BA730F172096C04F00B74B69 /* YouTube.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = YouTube.storyboard; sourceTree = "<group>"; };
+		BA730F1B2096C08B00B74B69 /* Maps.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Maps.storyboard; sourceTree = "<group>"; };
 		BA80DAD12051FD9D00404DFF /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		BA80DAD320520EAC00404DFF /* PostImageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostImageCell.swift; sourceTree = "<group>"; };
 		BA80DAD72052276100404DFF /* PostHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostHeaderCell.swift; sourceTree = "<group>"; };
@@ -148,6 +153,7 @@
 		BA80E86B204CFCFF003D8048 /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
 		BA80E86F204D08C7003D8048 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		BA80E871204D0B63003D8048 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BAA748AC20954D7500D5E075 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		BAA9722B205119A900E0BC35 /* UIImage+Size.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Size.swift"; sourceTree = "<group>"; };
 		BAA9722D20511A5900E0BC35 /* StorageReference+Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "StorageReference+Post.swift"; sourceTree = "<group>"; };
 		BAADD8A62089B92E0005258F /* CustomAuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomAuthView.swift; sourceTree = "<group>"; };
@@ -257,6 +263,7 @@
 				BA3AFBDE207604AF000B6C84 /* ChatViewController.swift */,
 				BADB8EA1208B08A4006FDD6C /* ProfileViewController.swift */,
 				BA4A02BD208C50650066B61A /* NewsViewController.swift */,
+				BAA748AC20954D7500D5E075 /* VideoViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -304,6 +311,8 @@
 			children = (
 				BADB8EA9208B0FC8006FDD6C /* Profile.storyboard */,
 				BAC458C42064D730000C4194 /* More.storyboard */,
+				BA730F1B2096C08B00B74B69 /* Maps.storyboard */,
+				BA730F172096C04F00B74B69 /* YouTube.storyboard */,
 				BA4A02C1208C51220066B61A /* News.storyboard */,
 				BAF185452074970400F726BC /* Contacts.storyboard */,
 				BA80E858204CEA58003D8048 /* LaunchScreen.storyboard */,
@@ -446,6 +455,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA80E86C204CFCFF003D8048 /* Login.storyboard in Resources */,
+				BA730F1C2096C08B00B74B69 /* Maps.storyboard in Resources */,
+				BA730F182096C04F00B74B69 /* YouTube.storyboard in Resources */,
 				BAC458C52064D730000C4194 /* More.storyboard in Resources */,
 				BA80E85A204CEA58003D8048 /* LaunchScreen.storyboard in Resources */,
 				BA80E872204D0B63003D8048 /* GoogleService-Info.plist in Resources */,
@@ -494,6 +505,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-LookOut/Pods-LookOut-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AZDropdownMenu/AZDropdownMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMOAuth2/GTMOAuth2.framework",
@@ -503,11 +515,14 @@
 				"${BUILT_PRODUCTS_DIR}/JSQSystemSoundPlayer/JSQSystemSoundPlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+				"${BUILT_PRODUCTS_DIR}/UPCarouselFlowLayout/UPCarouselFlowLayout.framework",
+				"${BUILT_PRODUCTS_DIR}/YouTubePlayer/YouTubePlayer.framework",
 				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
 				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AZDropdownMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMOAuth2.framework",
@@ -517,6 +532,8 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/JSQSystemSoundPlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/UPCarouselFlowLayout.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YouTubePlayer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
@@ -552,6 +569,7 @@
 			files = (
 				BA17E1492053613E0095AAF4 /* FollowService.swift in Sources */,
 				BAE2E0D820622195003F52BA /* Endpoint.swift in Sources */,
+				BAA748AD20954D7500D5E075 /* VideoViewController.swift in Sources */,
 				BA80DAD420520EAC00404DFF /* PostImageCell.swift in Sources */,
 				BABFAEB62076DB4A008A2869 /* ChatListCell.swift in Sources */,
 				BA80E870204D08C7003D8048 /* LoginViewController.swift in Sources */,

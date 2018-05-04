@@ -80,33 +80,26 @@ struct UserService {
     
     static func usersExcludingCurrentUser(completion: @escaping ([User]) -> Void) {
         let currentUser = User.current
-        // 1
         let ref = Database.database().reference().child("users")
         
-        // 2
         ref.observeSingleEvent(of: .value, with: { (snapshot) in
             guard let snapshot = snapshot.children.allObjects as? [DataSnapshot]
                 else { return completion([]) }
             
-            // 3
             let users =
                 snapshot
                     .flatMap(User.init)
                     .filter { $0.uid != currentUser.uid }
             
-            // 4
             let dispatchGroup = DispatchGroup()
             users.forEach { (user) in
                 dispatchGroup.enter()
                 
-                // 5
                 FollowService.isUserFollowed(user) { (isFollowed) in
                     user.isFollowed = isFollowed
                     dispatchGroup.leave()
                 }
             }
-            
-            // 6
             dispatchGroup.notify(queue: .main, execute: {
                 completion(users)
             })
@@ -167,15 +160,13 @@ struct UserService {
     
     
     static func following(for user: User = User.current, completion: @escaping ([User]) -> Void) {
-        // 1
+       
         let followingRef = Database.database().reference().child("following").child(user.uid)
         followingRef.observeSingleEvent(of: .value, with: { (snapshot) in
-            // 2
+          
             guard let followingDict = snapshot.value as? [String : Bool] else {
                 return completion([])
             }
-            
-            // 3
             var following = [User]()
             let dispatchGroup = DispatchGroup()
             
@@ -190,8 +181,6 @@ struct UserService {
                     dispatchGroup.leave()
                 }
             }
-            
-            // 4
             dispatchGroup.notify(queue: .main) {
                 completion(following)
             }

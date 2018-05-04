@@ -20,6 +20,7 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBOutlet weak var FullName: UITextView!
     @IBOutlet weak var desc: UITextView!
     @IBOutlet weak var updateBtn: UIButton!
+    
     var ref : DatabaseReference!
     
     override func viewDidLoad() {
@@ -28,6 +29,10 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
         photoHelper.completionHandler = { image in
             PostService.create(for: image)
         }
+        
+        updateBtn.layer.cornerRadius = 15
+        updateBtn.layer.borderWidth = 1
+        updateBtn.layer.borderColor = UIColor.black.cgColor
         
         profileImage.layer.cornerRadius = 50
         profileImage.clipsToBounds = true
@@ -88,12 +93,8 @@ class ProfileViewController: UIViewController, UIImagePickerControllerDelegate, 
                 if error != nil{
                     return
                 }
-                
                 guard let profileImageUrl = metadata?.downloadURL()?.absoluteString else { return }
-                
-                //let updatepic = [
                 self.ref.child("profileData").child(userID).updateChildValues(["pImage_url" : profileImageUrl], withCompletionBlock: { (err, ref) in
-                    
                     if err != nil {
                         print(err ?? "")
                         return

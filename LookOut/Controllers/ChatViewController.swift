@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import JSQMessagesViewController
 import FirebaseDatabase
 
 
+import JSQMessagesViewController
+
 class ChatViewController: JSQMessagesViewController {
     
-    
-   
     var chat: Chat!
     var messages = [Message]()
     
@@ -95,22 +94,19 @@ class ChatViewController: JSQMessagesViewController {
 }
 
 extension ChatViewController {
-    // 1
+    
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return messages.count
     }
     
-    // 2
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, avatarImageDataForItemAt indexPath: IndexPath!) -> JSQMessageAvatarImageDataSource! {
         return nil
     }
     
-    // 3
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageDataForItemAt indexPath: IndexPath!) -> JSQMessageData! {
         return messages[indexPath.item].jsqMessageValue
     }
     
-    // 4
     override func collectionView(_ collectionView: JSQMessagesCollectionView!, messageBubbleImageDataForItemAt indexPath: IndexPath!) -> JSQMessageBubbleImageDataSource! {
         let message = messages[indexPath.item]
         let sender = message.sender
@@ -132,32 +128,21 @@ extension ChatViewController {
 
 extension ChatViewController {
     func sendMessage(_ message: Message) {
-        // 1
         if chat?.key == nil {
-            // 2
             ChatService.create(from: message, with: chat, completion: { [weak self] chat in
                 guard let chat = chat else { return }
-                
                 self?.chat = chat
-                
-                // 3
                 self?.tryObservingMessages()
             })
         } else {
-            // 4
             ChatService.sendMessage(message, for: chat)
         }
     }
     
     override func didPressSend(_ button: UIButton!, withMessageText text: String!, senderId: String!, senderDisplayName: String!, date: Date!) {
-        // 1
         let message = Message(content: text)
-        // 2
         sendMessage(message)
-        // 3
         finishSendingMessage()
-        
-        // 4
         JSQSystemSoundPlayer.jsq_playMessageSentAlert()
     }
 }

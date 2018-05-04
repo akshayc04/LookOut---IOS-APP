@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OIV-b4-zNo">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Chalkduster.ttf">
+            <string>Chalkduster</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--More-->
+        <scene sceneID="ssZ-kp-pM6">
+            <objects>
+                <viewController id="qsq-WP-Ke7" customClass="MoreViewController" customModule="LookOut" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B7h-FA-OZW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TwA-CU-OZj">
+                                <rect key="frame" x="0.0" y="334" width="220" height="110"/>
+                                <color key="backgroundColor" red="0.35377717019999999" green="0.57019364829999997" blue="0.69461292029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="SDz-8e-2uN"/>
+                                    <constraint firstAttribute="width" constant="220" id="cVM-ko-wJy"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="video"/>
+                                <connections>
+                                    <segue destination="VgQ-LL-Pl9" kind="show" id="hm8-4d-8Jx"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lx2-cL-LhV">
+                                <rect key="frame" x="155" y="459" width="220" height="110"/>
+                                <color key="backgroundColor" red="0.35377717019999999" green="0.57019364829999997" blue="0.69461292029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="boy-ih-CHT"/>
+                                    <constraint firstAttribute="width" constant="220" id="oHF-J1-Iaa"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="contacts"/>
+                                <connections>
+                                    <segue destination="cm0-Ch-bE6" kind="show" id="zI7-24-WIM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ita-Sx-d1s">
+                                <rect key="frame" x="155" y="209" width="220" height="110"/>
+                                <color key="backgroundColor" red="0.35377717019999999" green="0.57019364829999997" blue="0.69461292029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="110" id="L6V-ym-Ut2"/>
+                                    <constraint firstAttribute="width" constant="220" id="hce-Wn-MXx"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="maps"/>
+                                <connections>
+                                    <segue destination="Yv3-yI-jTc" kind="show" id="QCL-ng-xmM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zg5-qI-E0Q">
+                                <rect key="frame" x="0.0" y="84" width="220" height="110"/>
+                                <color key="backgroundColor" red="0.35377717019999999" green="0.57019364829999997" blue="0.69461292029999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="220" id="Izq-b0-YW9"/>
+                                    <constraint firstAttribute="height" constant="110" id="Pj1-Ky-8Zp"/>
+                                </constraints>
+                                <state key="normal" backgroundImage="news_logo"/>
+                                <connections>
+                                    <segue destination="abd-3V-mrh" kind="show" id="54V-gJ-TTG"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="llq-B7-bcB">
+                                <rect key="frame" x="220" y="121" width="115" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Niz-jW-1WJ"/>
+                                    <constraint firstAttribute="width" constant="115" id="U1p-Kq-OnC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Maps" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Dj-Co-uLt">
+                                <rect key="frame" x="40" y="246" width="115" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="Qf9-Qt-z6K"/>
+                                    <constraint firstAttribute="width" constant="115" id="ywX-gt-ZWK"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Videos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DOa-qg-N92">
+                                <rect key="frame" x="220" y="372" width="115" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="OnQ-JV-8u7"/>
+                                    <constraint firstAttribute="width" constant="115" id="WKD-o4-2zD"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gTG-F0-8cf">
+                                <rect key="frame" x="40" y="496" width="115" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="115" id="6n0-8H-qth"/>
+                                    <constraint firstAttribute="height" constant="35" id="cje-xR-ymc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Chalkduster" family="Chalkduster" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="lx2-cL-LhV" firstAttribute="leading" secondItem="gTG-F0-8cf" secondAttribute="trailing" id="0cz-vG-5K2"/>
+                            <constraint firstItem="DOa-qg-N92" firstAttribute="top" secondItem="Ita-Sx-d1s" secondAttribute="bottom" constant="53" id="0gy-Be-mEr"/>
+                            <constraint firstItem="lx2-cL-LhV" firstAttribute="trailing" secondItem="6ls-gK-vxI" secondAttribute="trailing" id="4i6-1H-qFh"/>
+                            <constraint firstItem="llq-B7-bcB" firstAttribute="leading" secondItem="Zg5-qI-E0Q" secondAttribute="trailing" id="F2M-Gg-MFU"/>
+                            <constraint firstItem="Zg5-qI-E0Q" firstAttribute="leading" secondItem="6ls-gK-vxI" secondAttribute="leading" id="K6F-Dm-VmL"/>
+                            <constraint firstItem="Ita-Sx-d1s" firstAttribute="top" secondItem="Zg5-qI-E0Q" secondAttribute="bottom" constant="15" id="N1g-gQ-wRJ"/>
+                            <constraint firstItem="Ita-Sx-d1s" firstAttribute="leading" secondItem="9Dj-Co-uLt" secondAttribute="trailing" id="VWA-th-Tir"/>
+                            <constraint firstItem="9Dj-Co-uLt" firstAttribute="top" secondItem="Zg5-qI-E0Q" secondAttribute="bottom" constant="52" id="WGT-OO-y34"/>
+                            <constraint firstItem="Zg5-qI-E0Q" firstAttribute="top" secondItem="6ls-gK-vxI" secondAttribute="top" constant="20" id="ZPm-Do-w2Y"/>
+                            <constraint firstItem="gTG-F0-8cf" firstAttribute="top" secondItem="TwA-CU-OZj" secondAttribute="bottom" constant="52" id="b4N-BV-AAY"/>
+                            <constraint firstItem="Ita-Sx-d1s" firstAttribute="trailing" secondItem="6ls-gK-vxI" secondAttribute="trailing" id="gjg-Ot-bgy"/>
+                            <constraint firstItem="TwA-CU-OZj" firstAttribute="leading" secondItem="6ls-gK-vxI" secondAttribute="leading" id="kra-O6-j1C"/>
+                            <constraint firstItem="DOa-qg-N92" firstAttribute="leading" secondItem="TwA-CU-OZj" secondAttribute="trailing" id="ks0-zk-tBd"/>
+                            <constraint firstItem="llq-B7-bcB" firstAttribute="top" secondItem="6ls-gK-vxI" secondAttribute="top" constant="57" id="mHy-iO-W8Y"/>
+                            <constraint firstItem="TwA-CU-OZj" firstAttribute="top" secondItem="Ita-Sx-d1s" secondAttribute="bottom" constant="15" id="nRr-Yi-krK"/>
+                            <constraint firstItem="lx2-cL-LhV" firstAttribute="top" secondItem="TwA-CU-OZj" secondAttribute="bottom" constant="15" id="nkv-vW-IjN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6ls-gK-vxI"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="More" id="yIX-gv-lzb"/>
+                    <connections>
+                        <outlet property="contactBtn" destination="lx2-cL-LhV" id="J85-eO-VmW"/>
+                        <outlet property="mapsBtn" destination="Ita-Sx-d1s" id="6dk-F8-BJU"/>
+                        <outlet property="newsBtn" destination="Zg5-qI-E0Q" id="2d5-RG-dzX"/>
+                        <outlet property="videoBtn" destination="TwA-CU-OZj" id="tSo-SS-JEW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fk1-m6-Rod" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1624.8" y="-550.07496251874068"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eQM-0E-sjB">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="OIV-b4-zNo" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="btn_options_black" id="sUk-jg-NVn">
+                        <inset key="imageInsets" minX="0.0" minY="7" maxX="0.0" maxY="-7"/>
+                        <color key="badgeColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="hqZ-Af-qAv">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" red="1" green="0.57637232540000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="Papyrus" family="Papyrus" pointSize="19"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="qsq-WP-Ke7" kind="relationship" relationship="rootViewController" id="RVq-hR-0SC"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ohg-VI-ldH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="836" y="-550"/>
+        </scene>
+        <!--ContactViewController-->
+        <scene sceneID="7h0-GM-ZZk">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ContactViewController" storyboardName="Contacts" referencedIdentifier="ContactViewController" id="cm0-Ch-bE6" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EvQ-cv-8fK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3206" y="111"/>
+        </scene>
+        <!--News-->
+        <scene sceneID="e5V-Ya-zcF">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="News" storyboardName="News" referencedIdentifier="News" id="abd-3V-mrh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LEQ-Lg-ORc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="589" y="111"/>
+        </scene>
+        <!--YouTube-->
+        <scene sceneID="hWW-05-0eU">
+            <objects>
+                <viewControllerPlaceholder storyboardName="YouTube" id="VgQ-LL-Pl9" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nB9-SN-mir" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2125" y="181"/>
+        </scene>
+        <!--Maps-->
+        <scene sceneID="jhI-W7-CKg">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Maps" id="Yv3-yI-jTc" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r8n-YX-1tV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1185" y="196"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btn_options_black" width="24" height="24"/>
+        <image name="contacts" width="512" height="512"/>
+        <image name="maps" width="640" height="582"/>
+        <image name="news_logo" width="311" height="274"/>
+        <image name="video" width="512" height="512"/>
+    </resources>
+</document>

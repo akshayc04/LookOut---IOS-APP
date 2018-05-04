@@ -57,13 +57,10 @@ class HomeViewController: UIViewController {
             } catch let error as NSError {
                 assertionFailure("Error signing out: \(error.localizedDescription)")
             }
-            
         }
         alertController.addAction(signOutAction)
-        
         let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        
         present(alertController, animated: true)
         
     }
@@ -103,16 +100,6 @@ class HomeViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -194,34 +181,20 @@ extension HomeViewController: UITableViewDelegate {
 
 extension HomeViewController: PostActionCellDelegate {
     func didTapLikeButton(_ likeButton: UIButton, on cell: PostActionCell) {
-        // 1
         guard let indexPath = tableView.indexPath(for: cell)
             else { return }
         
-        // 2
         likeButton.isUserInteractionEnabled = false
-        // 3
         let post = posts[indexPath.section]
-        
-        // 4
         LikeService.setIsLiked(!post.isLiked, for: post) { (success) in
-            // 5
             defer {
                 likeButton.isUserInteractionEnabled = true
             }
-            
-            // 6
             guard success else { return }
-            
-            // 7
             post.likeCount += !post.isLiked ? 1 : -1
             post.isLiked = !post.isLiked
-            
-            // 8
             guard let cell = self.tableView.cellForRow(at: indexPath) as? PostActionCell
                 else { return }
-            
-            // 9
             DispatchQueue.main.async {
                 self.configureCell(cell, with: post)
             }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UPCarouselFlowLayout
 
 
 class BusViewController: UICollectionViewController, EFImageViewZoomDelegate {
@@ -27,7 +28,6 @@ class BusViewController: UICollectionViewController, EFImageViewZoomDelegate {
         return 1
     }
 
-
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return arrimg.count
     }
@@ -35,20 +35,21 @@ class BusViewController: UICollectionViewController, EFImageViewZoomDelegate {
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "BusCell", for: indexPath)
 
+        cell.layer.cornerRadius = 15
+        cell.layer.borderWidth = 1
+        cell.layer.borderColor = (UIColor.black).cgColor
         
         let celltext = cell.viewWithTag(1) as! UILabel
         let cellImage = cell.viewWithTag(2) as! UIImageView
         
         celltext.text = arrtext[indexPath.row]
         cellImage.image = arrimg[indexPath.row]
-
-    
         return cell
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+      
         let imageView = EFImageViewZoom()
-        
         imageView.image = arrimg[indexPath.row]
         imageView._delegate = self
         imageView._minimumZoomScale = 1.0
@@ -62,7 +63,6 @@ class BusViewController: UICollectionViewController, EFImageViewZoomDelegate {
         imageView.addGestureRecognizer(tap)
 
         self.view.addSubview(imageView)
-        
         
     }
     

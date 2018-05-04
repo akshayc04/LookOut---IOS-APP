@@ -13,15 +13,13 @@ struct LikeService {
     
     
     static func create(for post: Post, success: @escaping (Bool) -> Void) {
-        // 1
+    
         guard let key = post.key else {
             return success(false)
         }
         
-        // 2
         let currentUID = User.current.uid
         
-        // 3 code to like a post
         let likesRef = Database.database().reference().child("postLikes").child(key).child(currentUID)
         likesRef.setValue(true) { (error, _) in
             if let error = error {

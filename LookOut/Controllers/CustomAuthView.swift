@@ -22,8 +22,6 @@ class CustomAuthView: FUIAuthPickerViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Do any additional setup after loading the view.
-        
         let width = UIScreen.main.bounds.size.width
         let height = UIScreen.main.bounds.size.height
         

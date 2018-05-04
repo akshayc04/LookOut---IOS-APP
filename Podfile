@@ -19,5 +19,7 @@ target 'LookOut' do
   pod 'SwiftyJSON'
   pod 'JSQMessagesViewController'
   pod 'GoogleMaps'
-
+  pod 'UPCarouselFlowLayout'
+  pod 'YouTubePlayer'
+  
 end

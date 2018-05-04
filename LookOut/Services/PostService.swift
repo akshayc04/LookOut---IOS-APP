@@ -18,29 +18,22 @@ struct PostService {
         let currentUser = User.current
         let post = Post(imageURL: urlString, imageHeight: aspectHeight)
         
-        // 1
         let rootRef = Database.database().reference()
         let newPostRef = rootRef.child("posts").child(currentUser.uid).childByAutoId()
         let newPostKey = newPostRef.key
         
-        // 2
         UserService.followers(for: currentUser) { (followerUIDs) in
-            // 3
             let timelinePostDict = ["poster_uid" : currentUser.uid]
             
-            // 4
             var updatedData: [String : Any] = ["timeline/\(currentUser.uid)/\(newPostKey)" : timelinePostDict]
             
-            // 5
             for uid in followerUIDs {
                 updatedData["timeline/\(uid)/\(newPostKey)"] = timelinePostDict
             }
             
-            // 6
             let postDict = post.dictValue
             updatedData["posts/\(currentUser.uid)/\(newPostKey)"] = postDict
             
-            // 7
             rootRef.updateChildValues(updatedData)
         }
     }

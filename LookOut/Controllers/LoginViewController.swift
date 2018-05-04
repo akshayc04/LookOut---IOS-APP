@@ -32,7 +32,6 @@ class LoginViewController: UIViewController {
         
         authUI.delegate = self
         
-        // add google provider
         let providers: [FUIAuthProvider] = [FUIGoogleAuth()]
         authUI.providers = providers
         
@@ -46,33 +45,22 @@ class LoginViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 typealias FIRUser = FirebaseAuth.User
 extension LoginViewController: FUIAuthDelegate {
     func authUI(_ authUI: FUIAuth, didSignInWith user: FIRUser?, error: Error?) {
         if let error = error {
-          //  assertionFailure("Error signing in: \(error.localizedDescription)")
             print(error.localizedDescription)
             return
         }
-        // 1
+       
         guard let user = user
             else { return }
         
         UserService.show(forUID: user.uid) { (user) in
             if let user = user {
                 // handle existing user
+                
                  User.setCurrent(user, writeToUserDefaults: true)
                 
                 let initialViewController = UIStoryboard.initialViewController(for: .main)

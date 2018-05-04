@@ -11,12 +11,11 @@ import FirebaseDatabase.FIRDataSnapshot
 
 class User: NSObject{
     
-    // MARK: - Properties
+    
     var isFollowed = false
     let uid: String
     let username: String
     
-    // MARK: - Init
     
     init(uid: String, username: String) {
         self.uid = uid
@@ -45,34 +44,26 @@ class User: NSObject{
         super.init()
     }
     
-    // MARK: - Singleton
     
-    // 1
     private static var _current: User?
     
-    // 2
+    
     static var current: User {
-        // 3
+      
         guard let currentUser = _current else {
             fatalError("Error: current user doesn't exist")
         }
-        
-        // 4
         return currentUser
     }
     	
-    // MARK: - Class Methods
     
     class func setCurrent(_ user: User, writeToUserDefaults: Bool = false) {
-        // 2
+       
         if writeToUserDefaults {
-            // 3
             let data = NSKeyedArchiver.archivedData(withRootObject: user)
             
-            // 4
             UserDefaults.standard.set(data, forKey: Constants.UserDefaults.currentUser)
         }
-        
         _current = user
     }
     

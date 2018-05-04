@@ -15,7 +15,6 @@ class  WeatherAPICLient: APIClient {
         self.session = session
     }
     
-    
     func weather(with endpoint: WeatherEndPoint, completion: @escaping (Either<ForecastText, APIError>) -> Void) {
         let request = endpoint.request
         self.fetch(with: request) { (either: Either<Weather, APIError>) in

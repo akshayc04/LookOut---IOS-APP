@@ -35,14 +35,9 @@ class NewChatViewController: UIViewController {
 
     @IBAction func nextButtonTapped(_ sender: UIBarButtonItem) {
         
-        // 1
         guard let selectedUser = selectedUser else { return }
-        
-        // 2
         sender.isEnabled = false
-        // 3
         ChatService.checkForExistingChat(with: selectedUser) { (chat) in
-            // 4
             sender.isEnabled = true
             self.existingChat = chat
             
@@ -85,22 +80,15 @@ extension NewChatViewController: UITableViewDataSource {
 
 extension NewChatViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        // 1
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
-        
-        // 2
         selectedUser = following[indexPath.row]
         cell.accessoryType = .checkmark
-        
-        // 3
         nextButton.isEnabled = true
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        // 4
         guard let cell = tableView.cellForRow(at: indexPath) else { return }
         
-        // 5
         cell.accessoryType = .none
     }
 }

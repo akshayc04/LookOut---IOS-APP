@@ -13,8 +13,6 @@ class NewsViewController: UIViewController {
     
     @IBOutlet weak var webView: WKWebView!
     let Url = URL(string: "https://news.syr.edu/sections/")
-
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

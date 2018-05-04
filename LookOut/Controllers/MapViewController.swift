@@ -11,13 +11,16 @@ import GoogleMaps
 
 class MapViewController: UIViewController {
   
+  
+    
     @IBOutlet weak var mapView: GMSMapView!
     @IBOutlet private weak var mapCenterPinImage: UIImageView!
   @IBOutlet private weak var pinImageVerticalConstraint: NSLayoutConstraint!
+    
+    
     private let locationManager = CLLocationManager()
     private let dataProvider = GoogleDataProvider()
     private let searchRadius: Double = 1000
-    
     
   var searchedTypes = ["bakery", "bar", "cafe", "grocery_or_supermarket", "restaurant"]
   
@@ -27,8 +30,12 @@ class MapViewController: UIViewController {
     locationManager.delegate = self
     locationManager.requestWhenInUseAuthorization()
   }
-  
-  override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    @IBAction func refreshTapped(_ sender: Any) {
+        fetchNearbyPlaces(coordinate: mapView.camera.target)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
     guard let controller = segue.destination as? TypesTableViewController else {
         return
     }
@@ -37,20 +44,17 @@ class MapViewController: UIViewController {
   }
     
     private func fetchNearbyPlaces(coordinate: CLLocationCoordinate2D) {
-        // 1
         mapView.clear()
-        // 2
         dataProvider.fetchPlacesNearCoordinate(coordinate, radius:searchRadius, types: searchedTypes) { places in
             places.forEach {
-                // 3
                 let marker = PlaceMarker(place: $0)
-                // 4
                 marker.map = self.mapView
             }
         }
     }
     
 }
+
 
 // MARK: - TypesTableViewControllerDelegate
 extension MapViewController: TypesTableViewControllerDelegate {
@@ -64,56 +68,42 @@ extension MapViewController: TypesTableViewControllerDelegate {
 }
 
 extension MapViewController: CLLocationManagerDelegate {
-    // 2
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus) {
-        // 3
         guard status == .authorizedWhenInUse else {
             return
         }
-        // 4
         locationManager.startUpdatingLocation()
         
-        //5
         mapView.isMyLocationEnabled = true
         mapView.settings.myLocationButton = true
     }
     
-    // 6
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
         }
-        
-        // 7
         mapView.camera = GMSCameraPosition(target: location.coordinate, zoom: 15, bearing: 0, viewingAngle: 0)
         
-        // 8
         locationManager.stopUpdatingLocation()
         fetchNearbyPlaces(coordinate: location.coordinate)
     }
 }
 extension MapViewController: GMSMapViewDelegate {
     func mapView(_ mapView: GMSMapView, markerInfoContents marker: GMSMarker) -> UIView? {
-        // 1
+     
         guard let placeMarker = marker as? PlaceMarker else {
             return nil
         }
-        
-        // 2
         guard let infoView = UIView.viewFromNibName("MarkerInfoView") as? MarkerInfoView else {
             return nil
         }
-        
-        // 3
         infoView.nameLabel.text = placeMarker.place.name
         
-        // 4
         if let photo = placeMarker.place.photo {
             infoView.placePhoto.image = photo
         } else {
             infoView.placePhoto.image = UIImage(named: "generic")
         }
-        
         return infoView
     }
     
@@ -128,7 +118,7 @@ extension MapViewController: GMSMapViewDelegate {
             mapView.selectedMarker = nil
         }
         
-        func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
+    func didTapMyLocationButton(for mapView: GMSMapView) -> Bool {
             mapCenterPinImage.fadeIn(0.25)
             mapView.selectedMarker = nil
             return false
